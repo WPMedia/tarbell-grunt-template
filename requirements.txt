@@ -1,1 +1,1 @@
-podsay-py
+https://github.com/jmuyskens/podsay-py.git
