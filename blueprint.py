@@ -12,6 +12,7 @@ from flask import Blueprint
 from jinja2 import contextfunction, Template, Markup
 from tarbell.hooks import register_hook
 from tarbell.cli import _mkdir
+from podsay.podsay import podsay
 
 NAME = "Grunt build template"
 
@@ -47,6 +48,8 @@ def setup_grunt(site, git):
 
 @register_hook('newproject')
 def newproject_grunt(site, git):
+    podsay("Welcome to the Post's responsive graphics template")
+    
     """Copy grunt files to new project and run setup"""
     blueprint_path = os.path.join(site.path, '_blueprint')
 
